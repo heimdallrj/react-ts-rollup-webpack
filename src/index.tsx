@@ -1,21 +1,5 @@
-import * as React from 'react'
-import './styles.scss'
-
-const { useState, useEffect } = React
-
-const Counter: React.FC<{
-    count: number
-    className: string
-}> = ({ count, className }) => (
-    <div className={`counter ${className}`}>
-        <p
-            key={count}
-            className={`counter__count ${className ? className + '__count' : ''}`}
-        >
-            {count}
-        </p>
-    </div>
-)
+import React, { useEffect, useState } from 'react'
+import Counter from "./Counter";
 
 export type ICounterProps = {
     className?: string
